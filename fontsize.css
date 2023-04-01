@@ -1,0 +1,31 @@
+@media (min-width: 900px) {
+  .header {
+    font-size: 40px;
+  }
+
+  .posts {
+    font-size: 22px;
+  }
+
+  .btn_readmore {
+    font-size: 20px;
+  }
+
+  .social {
+    font-size: 15px;
+  }
+
+  .news {
+    font-size: 15px;
+  }
+
+  #name,
+  #email {
+    font-size: 15px;
+  }
+
+  .button {
+    font-size: 15px;
+  }
+
+}

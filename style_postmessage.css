@@ -1,0 +1,248 @@
+@import url("fontfamily.css");
+
+.container {
+  grid-template-columns: 300px;
+  grid-template-areas:
+    "hd"
+    "nav"
+    "author"
+    "content"
+    "ft";
+  grid-gap: 20px;
+}
+
+.header {
+  grid-area: hd;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+}
+
+.btn_home {
+  display: flex;
+  border-radius: 70px;
+  font-size: 15px;
+  text-decoration: none;
+  width: 100px;
+  height: 30px;
+  justify-content: center;
+  background-color: deeppink;
+  color: white;
+}
+
+.content {
+  grid-area: content;
+  justify-content: center;
+}
+
+.author {
+  grid-area: author;
+  display: flex;
+  flex-direction: column;
+}
+
+#author_is,
+#author_jobs {
+  text-align: center;
+}
+
+.author_img {
+  justify-content: center;
+  text-align: center;
+  margin-left: 10px;
+  font-style: italic;
+  color: dimgray;
+}
+
+.posts {
+  display: flex;
+  flex-direction: row;
+  margin: 3rem;
+  padding: 0;
+}
+
+.post_title,
+.post_date {
+  text-align: center;
+}
+
+.post_img {
+  text-align: center;
+  font-style: italic;
+  color: dimgray;
+}
+
+.post_text {
+  text-align: start;
+}
+
+.signature {
+  text-align: end;
+  font-style: italic;
+  color: rgb(249, 9, 193);
+}
+
+.footer {
+  grid-area: ft;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  text-align: center;
+  padding: 0;
+  margin-top: 50px;
+  border-radius: 30px;
+}
+
+#name,
+#email {
+  border-radius: 10px;
+  text-align: center;
+}
+
+.button {
+  text-decoration: none;
+  border-color: aliceblue;
+  border-radius: 10px;
+  background-color: rgb(170, 170, 173);
+  border-color: rgb(3, 3, 3);
+  color: rgb(15, 14, 14);
+}
+
+
+@media (min-width: 900px) {
+  .container {
+    display: grid;
+    grid-template-columns: 800px 300px;
+    grid-template-rows: 150px 70px 300px 100px;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "hd hd"
+      "nav nav"
+      "content content"
+      "ft ft";
+    justify-content: center;
+    align-content: center;
+  }
+
+  .header {
+    grid-area: hd;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .btn_home {
+    grid-area: nav;
+    text-align: center;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 800px 300px;
+    grid-template-rows: 100px 100px 600px;
+    gap: 70px 30px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "post author"
+      "post img"
+      "post biography";
+    grid-area: content;
+  }
+
+  #post {
+    grid-area: post;
+    display: flex;
+    border-radius: 50px;
+    background-color: rgba(224, 117, 197, 0.136);
+  }
+
+  .post_title {
+    font-size: 35px;
+  }
+
+  .post_date {
+    font-size: 20px;
+  }
+
+  .post_img {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .post_text {
+    font-size: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .author {
+    grid-area: author;
+    margin-top: 21px;
+  }
+
+  #author_is {
+    font-size: 20px;
+  }
+
+  #author_jobs {
+    font-size: 16px;
+  }
+
+  .author_img {
+    grid-area: img;
+  }
+
+  .biography {
+    grid-area: biography;
+    font-size: 15px;
+  }
+
+  .footer {
+    grid-area: 4 / 1 / 5 / 3;
+    ;
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-areas:
+      "social news";
+    background-color: rgba(203, 87, 203, 0.073);
+    border-radius: 20px;
+    align-items: center;
+  }
+
+  .inst {
+    margin-left: 10px;
+  }
+
+  .social {
+    grid-area: social;
+    font-size: 15px;
+  }
+
+  .news {
+    grid-area: news;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  #name,
+  #email {
+    border-radius: 10px;
+    font-size: 15px;
+    width: 200px;
+    height: 20px;
+    text-align: center;
+  }
+
+  .button {
+    text-decoration: none;
+    border-color: aliceblue;
+    width: 140px;
+    height: 25px;
+    border-radius: 10px;
+    background-color: rgb(170, 170, 173);
+    border-color: rgb(3, 3, 3);
+    color: rgb(15, 14, 14);
+    font-size: 15pxs;
+  }
+}

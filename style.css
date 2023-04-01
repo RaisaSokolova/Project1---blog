@@ -1,0 +1,153 @@
+@import url("fontfamily.css");
+@import url("colors.css");
+@import url("fontsize.css");
+
+
+.container {
+  grid-template-columns: 300px;
+  grid-template-areas:
+    "hd"
+    "content"
+    "content"
+    "content"
+    "content"
+    "ft";
+  grid-gap: 20px;
+}
+
+.header {
+  grid-area: hd;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+}
+
+.content {
+  grid-area: content;
+}
+
+.posts {
+  flex-direction: row;
+  margin: 3rem;
+  padding: 0;
+}
+
+.footer {
+  grid-area: ft;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  padding: 0;
+}
+
+@media (min-width: 900px) {
+  .container {
+    display: grid;
+    grid-template-columns: 600px 600px;
+    grid-template-rows: 300px 600px 150px 150px;
+    gap: 40px 0px;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .header {
+    grid-area: 1 / 1 / 2 / 3;
+    text-align: center;
+  }
+
+  .content {
+    grid-area: 2 / 1 / 4 / 3;
+  }
+
+  .posts {
+    display: flex;
+    border-radius: 60px;
+    align-items: center;
+    justify-items: center;
+    column-gap: 20px;
+  }
+
+  .post1 {
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 600px;
+    gap: 10px 50px;
+    grid-template-areas:
+      "post1_img post1_text";
+    grid-area: 2 / 1 / 3 / 3;
+  }
+
+  .post1_img {
+    grid-area: post1_img;
+    width: 50%;
+  }
+
+  .post1_text {
+    grid-area: post1_text;
+  }
+
+  .post2 {
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 300px;
+    gap: 10px 50px;
+    grid-template-areas:
+      "post2_img post2_text";
+    grid-area: 3 / 1 / 4 / 3;
+  }
+
+  .post2_img {
+    grid-area: post2_img;
+    width: 42%;
+  }
+
+  .post2_text {
+    grid-area: post2_text;
+  }
+
+  .btn_readmore {
+    border-radius: 70px;
+  }
+
+  .footer {
+    grid-area: 4 / 1 / 5 / 3;
+    ;
+    display: grid;
+    grid-template-columns: 600px 600px;
+    grid-template-areas:
+      "social news";
+    border-radius: 20px;
+    align-items: center;
+  }
+
+  .inst {
+    margin-left: 10px;
+  }
+
+  .social {
+    grid-area: social;
+  }
+
+  .news {
+    grid-area: news;
+    text-align: center;
+  }
+
+  #name,
+  #email {
+    border-radius: 10px;
+    width: 200px;
+    height: 20px;
+    text-align: center;
+  }
+
+  .button {
+    text-decoration: none;
+    border-color: aliceblue;
+    width: 140px;
+    height: 25px;
+    border-radius: 10px;
+  }
+}

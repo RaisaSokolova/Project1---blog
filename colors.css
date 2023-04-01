@@ -1,0 +1,22 @@
+@media (min-width: 900px) {
+
+    .posts {
+        background-color: rgb(252, 226, 244);
+    }
+
+    .btn_readmore {
+        border-color: darkmagenta;
+        text-decoration: darkmagenta;
+    }
+
+    .footer {
+        background-color: rgba(48, 47, 48, 0.036);
+    }
+
+
+    .button {
+        background-color: rgb(170, 170, 173);
+        border-color: rgb(3, 3, 3);
+        color: rgb(15, 14, 14);
+    }
+}
